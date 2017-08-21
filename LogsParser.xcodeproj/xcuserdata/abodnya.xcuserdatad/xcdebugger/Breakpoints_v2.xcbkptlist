@@ -330,11 +330,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LogsParser/ViewController.swift"
-            timestampString = "525003537.745475"
+            timestampString = "525008632.02822"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "markSelected(_:)"
             landmarkType = "7">
          </BreakpointContent>

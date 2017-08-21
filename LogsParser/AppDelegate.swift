@@ -18,6 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        MethodSwizzle.swizzle()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

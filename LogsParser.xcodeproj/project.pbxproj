@@ -16,9 +16,15 @@
 		79D0EDD11F4743F800C44828 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D0EDD01F4743F800C44828 /* Filter.swift */; };
 		79D0EDD31F47448000C44828 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D0EDD21F47448000C44828 /* WindowController.swift */; };
 		79D0EDD71F4AD17200C44828 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D0EDD61F4AD17200C44828 /* StringExtensions.swift */; };
+		79D3ED421F4AF81C00E42779 /* MethodSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D3ED411F4AF81C00E42779 /* MethodSwizzle.m */; };
+		91A26AC71950848D70B0FACA /* libPods-LogsParser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20ECE41A5053F0351FA41FB1 /* libPods-LogsParser.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FD738EB179EC59277277529 /* Pods-LogsParser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogsParser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LogsParser/Pods-LogsParser.debug.xcconfig"; sourceTree = "<group>"; };
+		20ECE41A5053F0351FA41FB1 /* libPods-LogsParser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LogsParser.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4612D07FEA57EE49B8689EAA /* Pods-LogsParser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogsParser.release.xcconfig"; path = "Pods/Target Support Files/Pods-LogsParser/Pods-LogsParser.release.xcconfig"; sourceTree = "<group>"; };
+		793315C21F4AF77300D9356C /* LogsParser-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LogsParser-Bridging-Header.h"; sourceTree = "<group>"; };
 		797BE5971F47069D0007DAB5 /* LogsParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogsParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		797BE59A1F47069D0007DAB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		797BE59C1F47069D0007DAB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +36,8 @@
 		79D0EDD01F4743F800C44828 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		79D0EDD21F47448000C44828 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		79D0EDD61F4AD17200C44828 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		79D3ED401F4AF81C00E42779 /* MethodSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodSwizzle.h; sourceTree = "<group>"; };
+		79D3ED411F4AF81C00E42779 /* MethodSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodSwizzle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91A26AC71950848D70B0FACA /* libPods-LogsParser.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +57,8 @@
 			children = (
 				797BE5991F47069D0007DAB5 /* LogsParser */,
 				797BE5981F47069D0007DAB5 /* Products */,
+				950A7790B5B037D5B6ECD726 /* Pods */,
+				9027CA1C216A6A67D9FB7C9E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,8 +83,28 @@
 				797BE5A01F47069D0007DAB5 /* Assets.xcassets */,
 				797BE5A21F47069D0007DAB5 /* Main.storyboard */,
 				797BE5A51F47069D0007DAB5 /* Info.plist */,
+				793315C21F4AF77300D9356C /* LogsParser-Bridging-Header.h */,
+				79D3ED401F4AF81C00E42779 /* MethodSwizzle.h */,
+				79D3ED411F4AF81C00E42779 /* MethodSwizzle.m */,
 			);
 			path = LogsParser;
+			sourceTree = "<group>";
+		};
+		9027CA1C216A6A67D9FB7C9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20ECE41A5053F0351FA41FB1 /* libPods-LogsParser.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		950A7790B5B037D5B6ECD726 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1FD738EB179EC59277277529 /* Pods-LogsParser.debug.xcconfig */,
+				4612D07FEA57EE49B8689EAA /* Pods-LogsParser.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +114,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 797BE5A81F47069D0007DAB5 /* Build configuration list for PBXNativeTarget "LogsParser" */;
 			buildPhases = (
+				AAC761F43326E534478BB1B7 /* [CP] Check Pods Manifest.lock */,
 				797BE5931F47069D0007DAB5 /* Sources */,
 				797BE5941F47069D0007DAB5 /* Frameworks */,
 				797BE5951F47069D0007DAB5 /* Resources */,
+				CB6911816D13472006B17552 /* [CP] Embed Pods Frameworks */,
+				E0EE1881326C6BFFEC516FBB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -109,6 +143,7 @@
 					797BE5961F47069D0007DAB5 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = W8M2C9P2R6;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -143,11 +178,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AAC761F43326E534478BB1B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CB6911816D13472006B17552 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LogsParser/Pods-LogsParser-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0EE1881326C6BFFEC516FBB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LogsParser/Pods-LogsParser-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		797BE5931F47069D0007DAB5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79D3ED421F4AF81C00E42779 /* MethodSwizzle.m in Sources */,
 				797BE59D1F47069D0007DAB5 /* ViewController.swift in Sources */,
 				79D0EDD31F47448000C44828 /* WindowController.swift in Sources */,
 				79D0EDD11F4743F800C44828 /* Filter.swift in Sources */,
@@ -266,28 +350,37 @@
 		};
 		797BE5A91F47069D0007DAB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FD738EB179EC59277277529 /* Pods-LogsParser.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = W8M2C9P2R6;
 				INFOPLIST_FILE = LogsParser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = abodnya.dev.LogsParser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LogsParser/LogsParser-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		797BE5AA1F47069D0007DAB5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4612D07FEA57EE49B8689EAA /* Pods-LogsParser.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = W8M2C9P2R6;
 				INFOPLIST_FILE = LogsParser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = abodnya.dev.LogsParser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LogsParser/LogsParser-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
