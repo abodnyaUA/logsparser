@@ -1,0 +1,11 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "5f036bbd4fb6d0703ae9e5474cc80d5f"
+build_time: [556625979, 93741000]
+inputs:
+  "/Users/abodnya/Developer/Test/LogsParser/LogsParser/ViewController.swift": [556625979, 0]
+  "/Users/abodnya/Developer/Test/LogsParser/LogsParser/WindowController.swift": [556625502, 0]
+  "/Users/abodnya/Developer/Test/LogsParser/LogsParser/Filter.swift": [556625502, 0]
+  "/Users/abodnya/Developer/Test/LogsParser/LogsParser/StringExtensions.swift": [556625502, 0]
+  "/Users/abodnya/Developer/Test/LogsParser/LogsParser/Message.swift": [556625717, 0]
+  "/Users/abodnya/Developer/Test/LogsParser/LogsParser/AppDelegate.swift": [556625724, 0]
+  "/Users/abodnya/Developer/Test/LogsParser/LogsParser/Document.swift": [556625770, 0]
