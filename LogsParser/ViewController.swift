@@ -102,7 +102,13 @@ class ViewController: NSViewController, NSTableViewDelegate, NSSearchFieldDelega
             let message = self.message(at: row)
             let imageCell = cell as! NSImageCell
             if self.marked.contains(message) {
-                imageCell.image = NSImage(named: "flag")
+                imageCell.image = #imageLiteral(resourceName: "flag")
+            } else if message.appState == .active {
+                imageCell.image = #imageLiteral(resourceName: "sun")
+            } else if message.appState == .background {
+                imageCell.image = #imageLiteral(resourceName: "moon")
+            } else if message.appState == .innactive {
+                imageCell.image = #imageLiteral(resourceName: "call")
             } else {
                 imageCell.image = nil
             }

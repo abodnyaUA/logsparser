@@ -18,11 +18,18 @@ class Message: NSObject {
         }
     }
     var level = Level.common
+    var appState = AppState.undefined
     fileprivate(set) var linesCount = 0
 }
 
 enum Level {
-
     case common
     case error
+}
+
+enum AppState {
+    case undefined
+    case active
+    case innactive
+    case background
 }

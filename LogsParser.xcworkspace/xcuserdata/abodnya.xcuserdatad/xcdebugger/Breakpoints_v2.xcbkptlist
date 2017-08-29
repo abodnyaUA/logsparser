@@ -4,38 +4,17 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            symbolName = "[NSColor alternateSelectedControlColor]"
-            moduleName = "">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "+[NSColor alternateSelectedControlColor]"
-                  moduleName = "AppKit"
-                  usesParentBreakpointCondition = "Yes"
-                  offsetFromSymbolStart = "0">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LogsParser/MethodSwizzle.m"
-            timestampString = "525008487.424584"
+            timestampString = "525016631.038067"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "+my_alternateSelectedControlColor"
             landmarkType = "7">
          </BreakpointContent>
@@ -47,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LogsParser/MethodSwizzle.m"
-            timestampString = "525008487.424584"
+            timestampString = "525016631.038067"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "+swizzleMethodsWithClass:originalSelector:originalMethod:alternativeMethod:newOriginalSelector:"
             landmarkType = "7">
          </BreakpointContent>
@@ -63,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LogsParser/MethodSwizzle.m"
-            timestampString = "525008487.424584"
+            timestampString = "525016631.038067"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "+classMethodSwizzle:originalSelector:alternativeSelector:newOriginalSelector:"
             landmarkType = "7">
          </BreakpointContent>

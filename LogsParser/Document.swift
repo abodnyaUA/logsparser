@@ -50,6 +50,7 @@ class Document: NSDocument {
         let regexp = try NSRegularExpression(pattern: pattern, options: NSRegularExpression.Options(rawValue: 0))
 
         var startIndex = NSNotFound
+        var appState = AppState.undefined
         regexp.enumerateMatches(in: logSwiftString!, options: .init(rawValue: 0), range: NSMakeRange(0, logString.length)) { (result, flags, stop) in
             guard result != nil else {
                 return
@@ -59,8 +60,32 @@ class Document: NSDocument {
                 let previousEndLine = logString.range(of: "\n", options: .backwards, range: NSMakeRange(startIndex, currentIndex - startIndex))
                 let endIndex = previousEndLine.location
                 let substring = logString.substring(with: NSMakeRange(startIndex, endIndex - startIndex)) as NSString
-                if self.addMessage(logString: substring) {
+                if let message = self.addMessage(logString: substring) {
                     startIndex = currentIndex
+
+                    var newAppState = appState
+                    var previousAppState = AppState.undefined
+                    if message.message.contains("UIApplicationDidBecomeActiveNotification") {
+                        newAppState = .active
+                        previousAppState = .innactive
+                    } else if message.message.contains("UIApplicationWillResignActiveNotification") {
+                        newAppState = .innactive
+                        previousAppState = .active
+                    } else if message.message.contains("UIApplicationDidEnterBackgroundNotification") {
+                        newAppState = .background
+                        previousAppState = appState != .undefined ? appState : .active
+                    } else if message.message.contains("UIApplicationWillEnterForegroundNotification") {
+                        newAppState = .active
+                        previousAppState = .background
+                    }
+                    if newAppState != .undefined && appState == .undefined && self.messages.count > 0 {
+                        for message in self.messages {
+                            message.appState = previousAppState
+                        }
+                    }
+                    appState = newAppState
+
+                    message.appState = appState
                 }
             } else {
                 startIndex = currentIndex
@@ -73,14 +98,14 @@ class Document: NSDocument {
         self.addMessage(logString: substring)
     }
 
-    @discardableResult func addMessage(logString: NSString) -> Bool {
+    @discardableResult func addMessage(logString: NSString) -> Message? {
         guard logString.length > 23 else {
-            return false
+            return nil
         }
         let dateString = logString.substring(to: 23)
         let messageRange = logString.range(of: ": ")
         guard messageRange.location != NSNotFound else {
-            return false
+            return nil
         }
         var method = logString.substring(with: NSMakeRange(24, messageRange.location - 24))
         var level = Level.common
@@ -95,7 +120,7 @@ class Document: NSDocument {
         messageObject.dateString = dateString
         messageObject.level = level
         self.messages.append(messageObject)
-        return true
+        return messageObject
     }
 }
 
