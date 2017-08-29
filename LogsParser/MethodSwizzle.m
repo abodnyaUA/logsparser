@@ -13,8 +13,8 @@
 @implementation MethodSwizzle
 
 + (void)swizzle {
-    [MethodSwizzle classMethodSwizzle:[NSColor class] originalSelector:@selector(alternateSelectedControlColor) alternativeSelector:@selector(my_alternateSelectedControlColor) newOriginalSelector:@selector(original_alternateSelectedControlColor)];
-    [MethodSwizzle classMethodSwizzle:[NSColor class] originalSelector:@selector(alternateSelectedControlTextColor) alternativeSelector:@selector(my_alternateSelectedControlTextColor) newOriginalSelector:@selector(original_alternateSelectedControlTextColor)];
+//    [MethodSwizzle classMethodSwizzle:[NSColor class] originalSelector:@selector(alternateSelectedControlColor) alternativeSelector:@selector(my_alternateSelectedControlColor) newOriginalSelector:@selector(original_alternateSelectedControlColor)];
+//    [MethodSwizzle classMethodSwizzle:[NSColor class] originalSelector:@selector(alternateSelectedControlTextColor) alternativeSelector:@selector(my_alternateSelectedControlTextColor) newOriginalSelector:@selector(original_alternateSelectedControlTextColor)];
 }
 
 + (void)methodSwizzle:(Class)aClass originalSelector:(SEL)originalSelector alternativeSelector:(SEL)alternativeSelector newOriginalSelector:(SEL)newOriginalSelector{

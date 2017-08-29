@@ -56,7 +56,8 @@ class Document: NSDocument {
             }
             let currentIndex = result!.range.location
             if startIndex != NSNotFound {
-                let endIndex = currentIndex - 1
+                let previousEndLine = logString.range(of: "\n", options: .backwards, range: NSMakeRange(startIndex, currentIndex - startIndex))
+                let endIndex = previousEndLine.location
                 let substring = logString.substring(with: NSMakeRange(startIndex, endIndex - startIndex)) as NSString
                 if self.addMessage(logString: substring) {
                     startIndex = currentIndex
