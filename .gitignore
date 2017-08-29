@@ -33,4 +33,5 @@ UserInterfaceState.xcuserstate
 
 .idea/
 *.xcworkspace/xcshareddata/
+*.xcworkspace/xcuserdata/
 *.xcuserdatad
